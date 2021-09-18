@@ -1,0 +1,207 @@
+@import "./reset";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
+// ================= variables =================
+
+// ========== fonts ==============
+$roboto: Roboto, serif;
+$raleway: Raleway, serif;
+
+// ========== COLORS =============
+$primary: #16a085;
+$secondary: #b75d5d;
+$dark: #515151;
+$gray: #979494;
+$light: #ffffff;
+
+html {
+    font-size: 62.5%;
+
+    body {
+        height: 100vh;
+        width: 100%;
+        background-image: url("../Images/SPOILER_sven-fischer-V7WkmXntA8M-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        font-family: $roboto;
+
+        header {
+            .navbar {
+                font-family: $roboto;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    text-transform: capitalize;
+
+                    li {
+                        margin: 2rem 8rem;
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        line-height: 2.6rem;
+                        font-family: $raleway;
+                        color: $primary;
+
+                        @media (max-width: 576px) {
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                            margin: 2rem 4rem;
+                        }
+                    }
+
+                    li.account {
+                        background-color: $light;
+                        margin: 2rem 3rem;
+                        padding: 1.2rem 1.8rem;
+                        border-radius: 1.5rem;
+                        font-size:2rem;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        @media (max-width: 576px) {
+                            font-size: 1.5rem;
+                            padding: 1rem 1.3rem;
+                            margin: 1.3rem 3rem;
+                        }
+
+                        i {
+                            color: $secondary;
+                            font-size: 3rem;
+
+                            @media (max-width: 576px) {
+                                font-size: 1.5rem;
+                                
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        main {
+            section {
+                height: 84vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .search-container {
+                    background-color: $light;
+                    border-radius: 2rem;
+
+                    .form-group {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2rem;
+
+                        @media (max-width: 576px) {
+                            font-size: 1rem;
+                            flex-direction: column;
+                        }
+
+                        label {
+                            color: $dark;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+
+                        div {
+                            width: 17rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            border-right: 0.2rem solid $dark;
+                            margin-right: 1rem;
+                            font-size: 1.8rem;
+                            position: relative;
+
+                            @media (max-width: 576px) {
+                                font-size: 1.5rem;
+                                border: none;
+                                border-bottom: 0.2rem solid $dark;
+                                margin-bottom: 1rem;
+                                padding-bottom: 1rem;
+                            }
+
+                            select{
+                                background-color: transparent !important;
+                                border: none;
+                                text-align: center;
+                                font-size: 1.5rem;
+                                outline: none;
+                                color: $gray;
+                                appearance: none;
+                                cursor: pointer;
+
+                                @media (max-width: 576px) {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            input {
+                                background-color: transparent !important;
+                                border: none;
+                                text-align: center;
+                                font-size: 1.5rem;
+                                outline: none;
+
+                                @media (max-width: 576px) {
+                                    font-size: 1.2rem;
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+
+                                &::-webkit-calendar-picker-indicator {
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    background: transparent;
+                                    bottom: 0;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    cursor: pointer;
+                                }
+
+                                &::placeholder {
+                                    color: $gray;
+                                }
+                            }
+                        }
+
+                        .check-out {
+                            border: none;
+                        }
+
+                        .search-btn {
+                            background-color: $primary;
+                            font-size: 2rem;
+                            padding: 1rem 3rem;
+                            border: none;
+                            border-radius: 1rem;
+                            color: $light;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

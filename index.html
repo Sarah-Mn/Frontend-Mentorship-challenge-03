@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel With Us</title>
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <!-- =========================================== START HEADER ========================================= -->
+        <header>
+
+            <!-- =================================== START NAVBAR ========================================== -->
+            <nav class="navbar">
+                <ul>
+                    <li>travel with us</li>
+                    <li class="account">account <i class="fas fa-house-user"></i></li>
+                </ul>
+            </nav>
+            <!-- =================================== END NAVBAR ========================================== -->
+        </header>
+
+        <!-- ===================================== END HEADER =========================================== -->
+
+        
+        <!-- =======================================START MAIN =========================================== -->
+        <main>
+            <section class="search">
+
+                <div class="search-container">
+
+                    <form class="form-group">
+
+                        <div class="place">
+                            <label for="continents">Where you go?</label>
+                            <select name="continents" id="continents">
+                                <option value="Select a
+                                    region" disabled selected>Select a
+                                    region</option>
+                                <option value="north-american">North American</option>
+                                <option value="south-american">South American</option>
+                                <option value="asia">Asia</option>
+                                <option value="africa">Africa</option>
+                                <option value="europe">Europe</option>
+                                <option value="australia">Australia</option>
+                            </select>
+                        </div>
+
+                        <div class="check-in">
+                            <label for="date">Check in</label>
+                            <input type="text"
+                                placeholder="Add a date" id="date" name="date"
+                                onfocus="(this.type='date')"
+                                onblur="(this.type='text')">
+                        </div>
+
+                        <div class="check-out">
+                            <label for="check-out">Check out</label>
+                            <input type="text" placeholder="Add a date"
+                                id="check-out" name="check-out"
+                                onfocus="(this.type='date')"
+                                onblur="(this.type='text')">
+                        </div>
+
+                        <button class="search-btn">search</button>
+                    </form>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- =================================== END MAIN ========================================== -->
+    </body>
+</html>
